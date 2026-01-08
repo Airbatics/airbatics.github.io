@@ -62,25 +62,3 @@ footer{border-top:1px solid rgba(212,179,106,.18);padding:34px 20px;text-align:c
 #agegate .panel{background:linear-gradient(180deg, rgba(20,21,32,.95), rgba(20,21,32,.9));padding:40px;border:1px solid rgba(212,179,106,.35);border-radius:20px;max-width:440px}
 #agegate h2{font-family:'Playfair Display', serif;margin-top:0}
 @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:64px}}
-
-
-/* ========================= script.js ========================= */
-document.addEventListener('DOMContentLoaded',()=>{
-if(!localStorage.getItem('ageVerified')){
-document.getElementById('agegate').style.display='flex'
-}
-document.getElementById('enterSite')?.addEventListener('click',()=>{
-localStorage.setItem('ageVerified','true')
-document.getElementById('agegate').style.display='none'
-})
-const faders=document.querySelectorAll('.fade')
-const io=new IntersectionObserver(entries=>{
-entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
-},{threshold:.2})
-faders.forEach(f=>io.observe(f))
-const lb=document.getElementById('lightbox')
-document.querySelectorAll('.gallery img').forEach(img=>{
-img.addEventListener('click',()=>{lb.querySelector('img').src=img.src;lb.style.display='flex'})
-})
-lb?.addEventListener('click',()=>lb.style.display='none')
-})
