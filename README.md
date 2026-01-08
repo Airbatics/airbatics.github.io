@@ -1,2 +1,0 @@
-# dominus.github.io
-Dominus 
