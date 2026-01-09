@@ -102,3 +102,90 @@ footer{border-top:1px solid rgba(212,179,106,.18);padding:34px 20px;text-align:c
 #agegate .exit-button {
   background-color: #7c1d2a;
 }
+/* HERO SECTION */
+.hero {
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Image container */
+.hero-media {
+  position: relative;
+  width: 100%;
+  height: 420px; /* controls hero height */
+}
+
+/* The actual image */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* THIS is the key */
+  object-position: center;
+  display: block;
+}
+
+/* Dark luxury overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11,12,18,0.25) 0%,
+      rgba(11,12,18,0.75) 80%
+    );
+}
+
+/* Text content */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  max-width: 520px;
+  color: #f5f1e8;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: rgba(245,241,232,0.92);
+}
+
+/* Responsive scaling */
+@media (max-width: 900px) {
+  .hero-media {
+    height: 320px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-media {
+    height: 240px;
+  }
+
+  .hero-content {
+    left: 5%;
+    right: 5%;
+    max-width: none;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+}
