@@ -131,25 +131,20 @@ footer{border-top:1px solid rgba(212,179,106,.18);padding:34px 20px;text-align:c
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(11,12,18,0.25) 0%,
-      rgba(11,12,18,0.75) 80%
-    );
+  z-index: 2;
+  pointer-events: none;
 }
-
 /* Text content */
 .hero-content {
   position: absolute;
   top: 50%;
-  left: 6%;
+  left: 6%;               /* LOCKS text to the left */
   transform: translateY(-50%);
   max-width: 520px;
+  z-index: 3;
   color: #f5f1e8;
-  z-index: 2;
+  text-align: left;
 }
-
 .hero-content h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2.6rem;
