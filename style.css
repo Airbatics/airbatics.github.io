@@ -102,85 +102,56 @@ footer{border-top:1px solid rgba(212,179,106,.18);padding:34px 20px;text-align:c
 #agegate .exit-button {
   background-color: #7c1d2a;
 }
-/* HERO SECTION */
+/* HERO CONTAINER */
 .hero {
-  position: relative;
+  position: relative;   /* REQUIRED: anchors hero text */
   max-width: 1200px;
   margin: 40px auto;
   border-radius: 20px;
   overflow: hidden;
 }
 
-/* Image container */
+/* HERO MEDIA (IMAGE HOLDER) */
 .hero-media {
   position: relative;
   width: 100%;
-  height: 420px; /* controls hero height */
+  height: 420px;
 }
 
-/* The actual image */
+/* HERO IMAGES */
 .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;       /* THIS is the key */
+  object-fit: cover;
   object-position: center;
   display: block;
 }
 
-/* Dark luxury overlay */
+/* OVERLAY */
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
 }
-/* Text content */
+
+/* HERO TEXT — LEFT ALIGNED */
 .hero-content {
   position: absolute;
   top: 50%;
-  left: 6%;               /* LOCKS text to the left */
+  left: 6%;              /* THIS locks text to left */
   transform: translateY(-50%);
   max-width: 520px;
   z-index: 3;
   color: #f5f1e8;
   text-align: left;
 }
-.hero-content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.6rem;
-  margin-bottom: 12px;
-}
 
-.hero-content p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: rgba(245,241,232,0.92);
-}
-
-/* Responsive scaling */
-@media (max-width: 900px) {
-  .hero-media {
-    height: 320px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.1rem;
-  }
-}
-
+/* RESPONSIVE FIX */
 @media (max-width: 600px) {
-  .hero-media {
-    height: 240px;
-  }
-
   .hero-content {
     left: 5%;
     right: 5%;
     max-width: none;
-  }
-
-  .hero-content h1 {
-    font-size: 1.8rem;
   }
 }
