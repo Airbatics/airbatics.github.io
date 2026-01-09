@@ -34,9 +34,6 @@ border-bottom:1px solid rgba(212,179,106,.18)
 .brand span{color:var(--gold)}
 .nav a{margin-left:18px;font-size:.95rem;color:var(--ink)}
 .nav a:hover{color:var(--gold)}
-.hero{max-width:1200px;margin:0 auto;padding:96px 20px 64px;display:grid;grid-template-columns:1.2fr .8fr;gap:44px}
-.hero h1{font-family:'Playfair Display', serif;font-size:clamp(2.2rem,4vw,3.3rem);margin:0 0 12px}
-.hero p{color:var(--muted);max-width:52ch}
 .cta{display:inline-block;margin-top:22px;padding:12px 24px;border:1px solid var(--gold);border-radius:999px;color:var(--ink);background:linear-gradient(180deg, rgba(212,179,106,.12), rgba(212,179,106,0))}
 .cta:hover{background:linear-gradient(180deg, rgba(212,179,106,.22), rgba(212,179,106,.05))}
 .frame{background:linear-gradient(180deg, rgba(124,29,42,.35), rgba(124,29,42,.05));border:1px solid rgba(212,179,106,.35);border-radius:18px;padding:18px}
